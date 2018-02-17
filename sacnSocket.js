@@ -50,7 +50,7 @@ class sACNSocket{
         let address = ifaces[key][k2];
         if (address.family === 'IPv4' && !address.internal) {
           let octetA = address.address.split('.')[0];
-          if(octetA == 192 || octetA == 10){
+          if(octetA == 192 || octetA == 10 || octetA == 172){
             addresses.push(address.address);
           }
         }
